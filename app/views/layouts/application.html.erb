@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+	  <title>Naberhood</title>
+	  
+	  <%= favicon_link_tag 'favicon.ico' %>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<%= render 'shared/navbar' %>
+			<div class="row-hero-container">
+  <div class="row-fluid row-hero">
+  	<div class="video-holder gradient-overlay video-wrapper">
+  		<video autoplay loop muted>
+  			<source src="http://goodnaber.ca/assets/img/goodnaber.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"' />
+  			
+  			<img src="/images/product/product-parent-hero.jpg" title="Your browser does not support the <video> tag">
+  		</video>
+  	</div>
+  </div>
+ <!--     
+   <div class="container row-hero-overlay text-center">
+   		<div class="row">
+   			<div class="col-md-12 row-hero-info">
+   				<h1 class="row-hero-title">Headline in Video.</h1>
+   			</div>
+   		</div>
+   </div>
+-->
+</div>
+
+		<%= render 'shared/message' %>
+
+
+
+		<div class="container">
+			<%= yield %>	
+		</div>
+
+		
+	</body>
+</html>
